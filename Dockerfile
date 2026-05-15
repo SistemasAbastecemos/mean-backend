@@ -5,7 +5,7 @@ WORKDIR /app
 
 # Instalar dependencias primero (cache de capas)
 COPY package.json package-lock.json* ./
-RUN npm ci --omit=dev
+RUN npm install --omit=dev
 
 # Copiar código fuente
 COPY src/ ./src/
